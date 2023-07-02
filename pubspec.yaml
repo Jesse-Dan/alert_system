@@ -1,0 +1,39 @@
+name: alert_system
+description: A Flutter plugin for displaying overlay-based alerts in your application.
+version: 0.0.1
+homepage: https://github.com/Jesse-Dan/alert_system
+
+environment:
+  sdk: '>=3.0.5 <4.0.0'
+  flutter: '>=3.3.0'
+
+dependencies:
+  bot_toast: ^4.0.4
+  flutter:
+    sdk: flutter
+  plugin_platform_interface: ^2.0.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+
+flutter:
+  plugin:
+    platforms:
+      android:
+        package: com.example.alert_system
+      ios:
+        pluginClass: AlertSystemPlugin
+
+  # assets:
+    # Add any assets required by the plugin
+    # - assets/images/alert_icon.png
+
+  fonts:
+    # Add any custom fonts required by the plugin
+    # - family: MyCustomFont
+    #   fonts:
+    #     - asset: fonts/MyCustomFont-Regular.ttf
+    #     - asset: fonts/MyCustomFont-Bold.ttf
+    #       weight: 700
