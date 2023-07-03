@@ -27,8 +27,33 @@ class OverlayManager {
   /// Shows an overlay with the provided `child` widget.
   ///
   /// The `child` widget will be displayed as the content of the overlay.
-  static void show({required Widget child}) {
-    overlayer = Overlayer.showOverlay(child: child);
+  static void show({
+    required Widget child,
+    int backgroundColor = 0x42000000,
+    int seconds = 0,
+    bool clickClose = false,
+    bool allowClick = false,
+    bool ignoreContentClick = false,
+    bool crossPage = true,
+    int animationMilliseconds = 200,
+    int animationReverseMilliseconds = 200,
+    BackButtonBehaviorChecker backButtonBehavior =
+        BackButtonBehaviorChecker.none,
+    void Function()? cancelFunc,
+  }) {
+    overlayer = Overlayer.showOverlay(
+      child: child,
+      backgroundColor: backgroundColor,
+      seconds: seconds,
+      clickClose: clickClose,
+      allowClick: allowClick,
+      ignoreContentClick: ignoreContentClick,
+      crossPage: crossPage,
+      animationMilliseconds: animationMilliseconds,
+      animationReverseMilliseconds: animationReverseMilliseconds,
+      backButtonBehavior: backButtonBehavior,
+      cancelFunc: cancelFunc,
+    );
   }
 
   /// Dismisses the currently active overlay.

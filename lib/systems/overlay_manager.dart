@@ -53,7 +53,7 @@ class Overlayer extends BotToast {
   final BackButtonBehaviorChecker backButtonBehavior;
 
   /// A callback function to be invoked when the overlay is closed.
-  Function()? cancelFunc;
+  void Function()? cancelFunc;
 
   /// Constructs an OverLaymanager instance to close an overlay.
   Overlayer.closeOverlay({
